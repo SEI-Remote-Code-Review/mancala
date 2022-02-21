@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mancala</title>
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&family=Kalam:wght@300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script defer src="./js/app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <h1 class="animate__bounceIn"><strong></strong>Mancala!</strong></h1>
+  <button type="button" class="btn btn-primary" id ="howToButton" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    How-To Play
+  </button>
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">How To Play Mancala</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <strong><h3>Basic Rules:</h3></strong>
+          <ul>
+            <li>The game always moves around the board in a counter-clockwise circle (to the right).
+            </li>
+            <li>The store on your right belongs to you. That is where you keep the seeds you win.
+            </li>
+            <li>The six pits near you are your pits.
+            </li>
+            <li>Once you touch the seeds in a pit, you must move those seeds.
+            </li> 
+            <li>You can only put seeds in your own store, not your opponent’s store.</li>
+          </ul>
+          <ul><strong><h3>Starting the Game:</h3></strong>
+            <li>On a turn, a player picks up all the seeds in one pit and “sows” them to the right, placing one
+              seed in each of the pits along the way. If you come to your store, then add a seed to your store
+              and continue. You may end up putting seeds in your opponent’s pits along the way.
+            </li>
+            <li>Play alternates back and forth, with opponents picking up the seeds in one of their pits and
+              distributing them one at a time into the pits on the right, beginning in the pit immediately to the
+              right.</li>
+          </ul>
+          <strong><h3>Special Rules:</h3></strong>
+          <ul>
+            <li>When the last seed in your hand lands in your store, take another turn.
+            </li>
+            <li>When the last seed in your hand lands in one of your own pits, if that pit had been empty you
+              get to keep all of the seeds in your opponents pit on the opposite side. Put those captured seeds,
+              as well as the last seed that you just played on your side, into the store.
+            </li>
+          </ul>
+          <strong><h3>Ending the Game:</h3></strong>
+          <ul></ul>
+          The game is over when one player’s pits are completely empty. The other player takes the seeds
+          remaining in her pits and puts those seeds in her store. Count up the seeds. Whoever has the most
+          seeds wins. 
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+ <h2 id="p2icon"><img src="images/player-icon.png">Player 2</h2>
+  <main>
+    <section class="board">
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="0" class="pit store" id="pit13">0</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit12">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit11">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit10">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit9">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit8">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit7">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="0" class ="pit store" id="pit6">0</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit5">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit4">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit3">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit2">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit1">4</div>
+      <div data-bs-toggle="tooltip" data-bs-placement="top" title="4" class ="pit" id="pit0">4</div>
+    </section>
+  </main>
+  <h2 id="p1icon"><img src="images/player-icon.png">Player 1</h2>
+  <button class="btn btn-danger" id="resetButton">Reset</button>
+</body>
+</html>
+

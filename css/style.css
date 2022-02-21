@@ -1,0 +1,159 @@
+html {
+  box-sizing: border-box
+}
+
+/* The Universal Selector */
+*, /* All elements*/
+*::before, /* All ::before pseudo-elements */
+*::after { /* All ::after pseudo-elements */
+  /* height & width will now include border & padding by default
+     but can be over-ridden as needed */
+  box-sizing: inherit;
+}
+
+/* resets font size to be 62.5% of the user preference - 
+     in most browser configurations this will be 10px */
+:root {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: rgb(79, 146, 85);
+  /* Use a system font, if none are available use an available sans-sarif font */
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roo, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  margin: 0;
+  text-align: center;
+  font-family: 'Kalam', cursive;
+}
+h1 {
+  margin: 30px;
+  font-size: 5rem;
+}
+#howToButton{
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+#resetButton {
+  font-size: 1.5rem;
+}
+img {
+  height: 50px;
+  width: 50px;
+  display: inline;
+}
+#p2icon {
+  margin-right: 250px;
+  margin-bottom: 10px;
+  font-weight: normal;
+}
+#p1icon {
+  margin-top: 10px;
+  margin-right: 250px;
+  font-weight: normal;
+}
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:200px;
+  width:750px;
+  background-color: rgb(196, 109, 9);
+  background-image: url('../images/woodgrain.jpeg');
+  background-size: 200px 750px;
+  border-radius:50px;
+  padding-right: 5px;
+  margin: auto;
+}
+.pit {
+  background: rgba(0, 2, 0, 0.3);
+  border-radius: 50%;
+  height: 75px;
+  width: 75px;
+  margin: 15px;
+}
+.pit:hover{
+  opacity: 0.5;
+}
+
+.store {
+  height: 150px;
+  border-radius: 40%;
+}
+.board {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.5rem;
+  grid-template-columns: 100px 80px 80px 80px 80px 80px 80px 100px;
+  grid-template-rows: 100px 100px;
+  grid-template-areas:
+        "pit13 pit12 pit11 pit10 pit9 pit8 pit7 pit6"
+        "pit13 pit0 pit1 pit2 pit3 pit4 pit5 pit6";
+}
+
+.modal-body {
+    align-items: center;
+    flex-direction: column;
+    display: flex;
+
+  }
+
+#pit0 {
+  grid-area: pit0;
+}
+
+#pit1 {
+  grid-area: pit1;
+}
+
+#pit2 {
+  grid-area: pit2;
+}
+
+#pit3 {
+  grid-area: pit3;
+}
+
+#pit4 {
+  grid-area: pit4;
+}
+
+#pit5 {
+  grid-area: pit5;
+}
+
+#pit6 {
+  grid-area: pit6;
+  margin: 40px;
+}
+
+#pit7 {
+  grid-area: pit7;
+}
+
+#pit8 {
+  grid-area: pit8;
+}
+
+#pit9 {
+  grid-area: pit9;
+}
+
+#pit10 {
+  grid-area: pit10;
+}
+
+#pit11 {
+  grid-area: pit11;
+}
+
+#pit12 {
+  grid-area: pit12;
+}
+
+#pit13 {
+  grid-area: pit13;
+  margin: 0px 45px 0px 10px;
+}
